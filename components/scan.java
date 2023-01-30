@@ -9,5 +9,8 @@ public class scan {
     System.out.println("name ?");
     String name = scan.nextLine();
     System.out.println(name);
+
+    int age = scan.nextInt();
+    System.out.println(age);
   }
 }
