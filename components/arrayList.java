@@ -7,8 +7,8 @@ public class arrayList {
       ArrayList<Integer> arr = new ArrayList<Integer>();
 
       
-      arr.add( 2);
       arr.add( 1);
+      arr.set( 0,2);
       System.out.println(arr.get(0));
       System.out.println(arr.size());
       
