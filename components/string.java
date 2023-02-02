@@ -14,7 +14,5 @@ public class string {
     System.out.println(name.toUpperCase());
     System.out.println(name.replace('a', 'A'));
     System.out.println(name.trim());
-    
-    
   }
 }
