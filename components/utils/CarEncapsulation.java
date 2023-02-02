@@ -1,4 +1,4 @@
-package components;
+package components.utils;
 
 public class CarEncapsulation {
   private String model;
