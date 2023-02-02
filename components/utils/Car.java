@@ -1,7 +1,7 @@
 package components.utils;
 
 public class Car {
-  static public void foo() {
+  public void foo() {
     System.out.println("foo");
   }
   
