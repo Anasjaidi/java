@@ -3,6 +3,10 @@ package components.utils;
 public class CarCopy {
   private String model;
   private int year;
+  public CarCopy(){}
+  public CarCopy(CarCopy car) {
+    this.copy(car);
+  }
 
   public int getYear() {
     return year;
