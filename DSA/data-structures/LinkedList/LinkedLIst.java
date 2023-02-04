@@ -61,6 +61,18 @@ public class LinkedLIst {
 
     System.out.println(linkedlist.indexOf("E")); // 3
     
+    linkedlist.addFirst("0"); // add to the begging
+
+    System.out.println(linkedlist); // [0, B, C, D, E, F]
+    
+    linkedlist.addLast("-1"); // add to the tail
+
+    System.out.println(linkedlist); // [0, B, C, D, E, F, -1]
+    
+    linkedlist.removeFirst();
+    linkedlist.removeLast();
+
+    System.out.println(linkedlist); // [B, C, D, E, F]
     
   }
 }
