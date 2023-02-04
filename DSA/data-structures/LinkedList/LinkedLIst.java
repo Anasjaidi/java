@@ -45,6 +45,21 @@ public class LinkedLIst {
 
     System.out.println(linkedlist); // [B, C, D, E, F]
     
+    /**
+     * 
+     * 
+    */
+    
+    linkedlist.add(4, "A"); // insert in the 0-indexed index provided
+
+    System.out.println(linkedlist); // [B, C, D, E, A, F]
+    
+
+    linkedlist.remove("A"); // remove A
+
+    System.out.println(linkedlist); // [B, C, D, E, F]
+
+    System.out.println(linkedlist.indexOf("E")); // 3
     
     
   }
