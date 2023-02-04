@@ -7,7 +7,7 @@ public class LinkedLIst {
     LinkedList<String> linkedlist = new LinkedList<String>();
 
     /**
-     * since linkedlist implms Queue and more we can traited as a stac
+     * since linkedlist implms Stack and more we can traited as a stack
      * last in first out
     */
     linkedlist.push("A");
@@ -24,6 +24,26 @@ public class LinkedLIst {
     System.out.println("poped: "+poped); // poped: F
 
     System.out.println(linkedlist); // [E, D, C, B, A]
+    
+    linkedlist.clear();
+    /**
+     * also we can trait is a queue
+     * first in first out
+    */
+    linkedlist.offer("A");
+    linkedlist.offer("B");
+    linkedlist.offer("C");
+    linkedlist.offer("D");
+    linkedlist.offer("E");
+    linkedlist.offer("F");
+    
+    System.out.println(linkedlist); // [A, B, C, D, E, F]
+
+    poped = linkedlist.poll();
+
+    System.out.println("poped: "+poped); // poped: A
+
+    System.out.println(linkedlist); // [B, C, D, E, F]
     
     
     
