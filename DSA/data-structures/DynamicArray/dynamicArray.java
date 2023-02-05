@@ -18,7 +18,7 @@ public class dynamicArray {
   }
 
   public void add(Object _data) {
-    if (size <= capacity) grow();
+    if (size >= capacity) grow();
     arr[size++] = _data;
   }
 
@@ -53,7 +53,8 @@ public class dynamicArray {
 
   private void grow() {
     capacity *= 2;
-
+    System.out.println("new capacity: " + capacity);
+    
     Object[] newArray = new Object[capacity];
     for (int i = 0; i < size; i++) {
       newArray[i] = arr[i];
@@ -62,7 +63,12 @@ public class dynamicArray {
   }
 
   private void shrink() {
-
+    capacity /= 2;
+    Object[] newArray = new Object[capacity];
+    for (int i = 0; i < size; i++) {
+      newArray[i] = arr[i];
+    }
+    arr = newArray;
   }
 
   public boolean isEmpty() {
