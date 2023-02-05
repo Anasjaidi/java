@@ -31,10 +31,20 @@ public class dynamicArray {
   }
 
   public void delete(Object data) {
+    int element = search(data);
 
+    if (element == -1) return;
+    
+    for (int i = element; i < size; i++) {
+      arr[i] = arr[i + 1];
+    }
+    size--;
   }
 
   public int search(Object data) {
+    for (int i = 0; i < size; i++) {
+      if (data == arr[i]) return i;
+    }
     return -1;
   }
 

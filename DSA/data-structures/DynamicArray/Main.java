@@ -6,6 +6,8 @@ public class Main {
     x.add("B");
     x.add("C");
     x.insert(1, "S");
+
+    x.delete("C");
     System.out.println(x);
   }
 }
