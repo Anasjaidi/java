@@ -52,7 +52,13 @@ public class dynamicArray {
   }
 
   private void grow() {
+    capacity *= 2;
 
+    Object[] newArray = new Object[capacity];
+    for (int i = 0; i < size; i++) {
+      newArray[i] = arr[i];
+    }
+    arr = newArray;
   }
 
   private void shrink() {

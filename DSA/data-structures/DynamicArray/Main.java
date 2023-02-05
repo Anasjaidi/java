@@ -5,6 +5,22 @@ public class Main {
     x.add("A");
     x.add("B");
     x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
+    x.add("C");
     x.insert(1, "S");
 
     x.delete("C");
