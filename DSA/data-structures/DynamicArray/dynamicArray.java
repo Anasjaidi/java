@@ -21,7 +21,13 @@ public class dynamicArray {
   }
 
   public void insert(int _i, Object _data) {
+    if (size >= capacity) grow();
 
+    for (int i = size; i > _i; i--) {
+      arr[i] = arr[i - 1];
+    }
+    arr[_i] = _data;
+    size++;
   }
 
   public void delete(Object data) {

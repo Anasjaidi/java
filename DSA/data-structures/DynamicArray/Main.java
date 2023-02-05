@@ -5,7 +5,7 @@ public class Main {
     x.add("A");
     x.add("B");
     x.add("C");
-
+    x.insert(1, "S");
     System.out.println(x);
   }
 }
