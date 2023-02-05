@@ -27,8 +27,12 @@ public class stack {
     System.out.println("top in stack (last in): "+stack.peek()); // top in stack (last in): javascript
     
     System.out.println(stack.search("javascript")); // 1-indexed: 1 from top
+
     System.out.println(stack.search("java")); // 2 from top
+
+    System.out.println(stack.search("c++")); // -1 : not exist
     
+    System.out.println("size is: "+stack.size()); // size is: 2
     
   }
 }
