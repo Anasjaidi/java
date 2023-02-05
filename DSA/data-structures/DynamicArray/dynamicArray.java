@@ -45,7 +45,10 @@ public class dynamicArray {
   }
   @Override
   public String toString() {
-    // TODO Auto-generated method stub
-    return super.toString();
+    String str = "[";
+    for (int i = 0; i < size; i++) {
+      str += arr[i] + ", ";
+    }
+    return (str.subSequence(0, str.length() - 2) + "]");
   }
 }
