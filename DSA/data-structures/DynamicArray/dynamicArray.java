@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import org.w3c.dom.css.CSS2Properties;
+
 public class dynamicArray {
   int capacity = 10;
   int size = 0;
@@ -39,6 +41,7 @@ public class dynamicArray {
       arr[i] = arr[i + 1];
     }
     size--;
+    if (size <= (int)(capacity / 3)) shrink();
   }
 
   public int search(Object data) {
