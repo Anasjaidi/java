@@ -23,7 +23,22 @@ public class selectionSort {
   }
   
   public static void sortMinMax(int[] arr) {
-    
+    int min, max;
+    for (int i = 0; i < arr.length / 2; i++) {
+      min = i;
+      max = arr.length - i - 1;
+      for (int j = i; j <= arr.length - i - 1; j++) {
+        if (arr[j]  > arr[max]) max = j;
+        if (arr[j] < arr[min]) min = j;
+      }
+      int temp = arr[i];
+      arr[i] = arr[min];
+      arr[min] = temp;
+      if (i == max) max = min;
+      temp = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = arr[max];
+      arr[max] = temp;
+    }
   }
 
 }
