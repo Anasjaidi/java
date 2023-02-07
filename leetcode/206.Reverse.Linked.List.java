@@ -21,4 +21,16 @@ class Solution {
     return prev;
   }
 
+  ListNode revList(ListNode cur, ListNode prev) {
+    if (cur == null)
+      return null;
+    if (cur.next == null) {
+      cur.next = prev;
+      return (cur);
+    }
+    ListNode tmp = cur.next;
+    cur.next = prev;
+    System.out.println(tmp.val);
+    return (revList(tmp, cur));
+  }
 }
