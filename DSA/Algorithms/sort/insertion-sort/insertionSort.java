@@ -12,7 +12,7 @@ public class insertionSort {
 
     for (int i = 0; i < arr.length - 1; i++) {
       tmp = arr[i + 1];
-      for (int j = i; j >= 0; j--) {
+      for (int j = i; j >= 0 && arr[j] > tmp; j--) {
         if (arr[j] > tmp) {
           arr[j + 1] = arr[j];
           arr[j] = tmp;
