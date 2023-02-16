@@ -23,6 +23,9 @@ public class hashmap {
     a.put("anas", 7);
     
     a.putIfAbsent("jaidi", 12);
+
+    a.remove("anas");
+    
     System.out.println(a);
   }
 }
