@@ -20,7 +20,7 @@ public class HelloSpringApp {
 			/**
 			 * call methods on the bean
 			 * */
-			System.out.println(theCoach.gdwo());
+			System.out.println(theCoach.gdf());
 			
 			/**
 			 * clean the context
