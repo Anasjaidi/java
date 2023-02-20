@@ -12,7 +12,11 @@
     
     </bean>
     <bean id="MyCoach" class="love.code.TrackCoach">
-    <constructor-arg ref="MyFortune"/> </bean>
+    <constructor-arg ref="MyFortune"/> 
+    </bean>
+    <bean id="MyCricketCoach" class="love.code.CricketCoach">
+    <property name="fortuneService" ref="MyFortune"></property>
+    </bean>
 </beans>
 
 

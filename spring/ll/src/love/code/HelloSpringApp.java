@@ -21,6 +21,9 @@ public class HelloSpringApp {
 			 * call methods on the bean
 			 * */
 			System.out.println(theCoach.gdf());
+			System.out.println(theCoach.cdf());
+			System.out.println(theCoach.cdf());
+			System.out.println(theCoach.cdf());
 			
 			/**
 			 * clean the context

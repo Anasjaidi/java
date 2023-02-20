@@ -1,17 +1,21 @@
 package love.code;
 
-public class BaseballCoach implements Coach {
+public class CricketCoach implements Coach {
 	private FortuneService fortuneService;
-	private FortuneService fortuneService2;
+
 	@Override
 	public String gdwo() {
 		// TODO Auto-generated method stub
-		return "Hello, Baseball!";
+		return null;
 	}
 	
-	public BaseballCoach(FortuneService _fortuneService) {
-		fortuneService = _fortuneService;
+	
+
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
 	}
+
+
 
 	@Override
 	public String gdf() {
@@ -22,8 +26,13 @@ public class BaseballCoach implements Coach {
 	@Override
 	public String cdf() {
 		// TODO Auto-generated method stub
-		fortuneService2 = new HappyFortuneService();
-		
-		return fortuneService2.getFortune();
+		return null;
 	}
+
+	@Override
+	public String df() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
