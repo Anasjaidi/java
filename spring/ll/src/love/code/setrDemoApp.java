@@ -10,6 +10,10 @@ public class setrDemoApp {
 		
 		CricketCoach myBeanCoach = appCtx.getBean("MyCricketCoach", CricketCoach.class);
 		System.out.println(myBeanCoach.gdf());
+		System.out.println(myBeanCoach.getEmailAddress());
+		System.out.println(myBeanCoach.getTeam());
+		
+		appCtx.close();
 	}
 
 }

@@ -16,6 +16,8 @@
     </bean>
     <bean id="MyCricketCoach" class="love.code.CricketCoach">
     <property name="fortuneService" ref="MyFortune"></property>
+    <property name="emailAddress" value="anas.jaidi@icloud.com"></property>
+    <property name="team" value="Java/Jee"></property>
     </bean>
 </beans>
 
