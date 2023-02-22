@@ -9,7 +9,7 @@ public class AppMain {
 		try {
 			
 			/**
-			 * Create Application Context
+			 * Read Spring Configuration 
 			 * */
 			ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("./applicationContext.xml");
 			
@@ -30,8 +30,16 @@ public class AppMain {
 			 * */
 			System.out.println(cpCoach.getDailyWorkOut());
 			System.out.println(tennisCoach.getDailyWorkOut());
+			
 			System.out.println(cpCoach.getDailyFortunet());
 			System.out.println(tennisCoach.getDailyFortunet());
+			
+			
+			/**
+			 * Close the Spring Context
+			 * */
+			appCtx.close();
+			
 			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
