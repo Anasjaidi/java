@@ -9,7 +9,7 @@ public class AppMain {
 	public static void main(String[] args) {
 		try {
 			ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("./applicationContext.xml");
-			Coach beanCoach = appCtx.getBean("MyCoach", TennisCoach.class);
+			Coach beanCoach = appCtx.getBean("cpCoach", Coach.class);
 			System.out.println(beanCoach.getDailyWorkOut());
 		} catch (Exception e) {
 			// TODO: handle exception
