@@ -8,9 +8,24 @@ public class AppMain {
 
 	public static void main(String[] args) {
 		try {
+			
 			ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("./applicationContext.xml");
-			Coach beanCoach = appCtx.getBean("cpCoach", Coach.class);
-			System.out.println(beanCoach.getDailyWorkOut());
+			
+			
+			/**
+			 * Retrieve The bean with Default name (first char lower)
+			 * */
+			Coach cpCoach = appCtx.getBean("cpCoach", Coach.class);
+			
+			/**
+			 * Retrieve the bean with ID
+			 * */
+			Coach tennisCoach = appCtx.getBean("MyCoach", Coach.class);
+			
+			
+			
+			System.out.println(cpCoach.getDailyWorkOut());
+			System.out.println(tennisCoach.getDailyWorkOut());
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
