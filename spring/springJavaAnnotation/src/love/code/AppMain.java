@@ -9,6 +9,9 @@ public class AppMain {
 	public static void main(String[] args) {
 		try {
 			
+			/**
+			 * Create Application Context
+			 * */
 			ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("./applicationContext.xml");
 			
 			
@@ -23,11 +26,14 @@ public class AppMain {
 			Coach tennisCoach = appCtx.getBean("MyCoach", Coach.class);
 			
 			
-			
+			/**
+			 * test the retrieved Beans
+			 * */
 			System.out.println(cpCoach.getDailyWorkOut());
 			System.out.println(tennisCoach.getDailyWorkOut());
+			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.err.println(e.getMessage());
 		}
 	}
 
