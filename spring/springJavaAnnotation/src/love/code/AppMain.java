@@ -1,10 +1,19 @@
 package love.code;
 
+import java.lang.constant.Constable;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class AppMain {
 
 	public static void main(String[] args) {
-		System.out.println("Hello, World!");
-
+		try {
+			ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("./applicationContext.xml");
+			Coach beanCoach = appCtx.getBean("MyCoach", TennisCoach.class);
+			System.out.println(beanCoach.getDailyWorkOut());
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 }
