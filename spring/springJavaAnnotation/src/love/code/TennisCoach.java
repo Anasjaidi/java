@@ -36,4 +36,12 @@ public class TennisCoach implements Coach {
 		return "Tennis Coach";
 	}
 
+
+
+	@Override
+	public String getDailyFortunet() {
+		// TODO Auto-generated method stub
+		return fortuneService.getDailyFortune();
+	}
+
 }

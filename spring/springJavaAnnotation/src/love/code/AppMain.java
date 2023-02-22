@@ -1,6 +1,5 @@
 package love.code;
 
-import java.lang.constant.Constable;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -31,6 +30,8 @@ public class AppMain {
 			 * */
 			System.out.println(cpCoach.getDailyWorkOut());
 			System.out.println(tennisCoach.getDailyWorkOut());
+			System.out.println(cpCoach.getDailyFortunet());
+			System.out.println(tennisCoach.getDailyFortunet());
 			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
