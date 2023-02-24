@@ -1,4 +1,4 @@
-package love.code;
+package love.learn;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -10,17 +10,17 @@ public class HelloSpringApp {
 		try (/**
 				 * load the spring configuration
 				 * */
-		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml")) {
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("./applicationContext.xml")) {
 			/**
 			 * retrieve bean from spring
 			 * */
-			Coach theCoach = ctx.getBean("MyCoach", Coach.class);
+//			Coach theCoach = ctx.getBean("MyCoach", Coach.class);
 			
 			
 			/**
 			 * call methods on the bean
 			 * */
-			System.out.println(theCoach.gdwo());
+//			System.out.println(theCoach.gdwo());
 			
 			/**
 			 * clean the context

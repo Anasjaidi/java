@@ -26,10 +26,10 @@ public class selectionSort {
     int min, max;
     for (int i = 0; i < arr.length / 2; i++) {
       min = i;
-      max = arr.length - i - 1;
-      for (int j = i; j <= arr.length - i - 1; j++) {
-        if (arr[j]  > arr[max]) max = j;
+      max = arr.length - 1 - i;
+      for (int j = i; j <= arr.length - 1 - i; j++) {
         if (arr[j] < arr[min]) min = j;
+        if (arr[j] > arr[max]) max =j;
       }
       int temp = arr[i];
       arr[i] = arr[min];
@@ -39,6 +39,7 @@ public class selectionSort {
       arr[arr.length - i - 1] = arr[max];
       arr[max] = temp;
     }
+      
   }
 
 }

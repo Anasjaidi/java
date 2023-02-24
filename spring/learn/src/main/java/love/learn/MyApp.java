@@ -1,4 +1,4 @@
-package love.code;
+package love.learn;
 
 public class MyApp {
 	
