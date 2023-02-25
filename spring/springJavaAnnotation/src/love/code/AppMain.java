@@ -33,6 +33,12 @@ public class AppMain {
 			System.out.println(cpCoach.getDailyFortunet());
 			System.out.println(tennisCoach.getDailyFortunet());
 			
+			
+			/**
+			 * clean ctx
+			 * */
+			appCtx.close();
+			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}

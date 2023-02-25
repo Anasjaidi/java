@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("MyCoach")
-@Scope("prototype")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 	
 	/**
@@ -60,6 +60,8 @@ public class TennisCoach implements Coach {
 	public void springConstructor() {
 		System.out.println("init");
 	}
+	
+	
 	@PreDestroy 
 	public void springDestructor() {
 		System.out.println("delete");
