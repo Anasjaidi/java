@@ -1,6 +1,7 @@
 package love.code;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -55,6 +56,14 @@ public class TennisCoach implements Coach {
 		return "Tennis Coach";
 	}
 
+	@PostConstruct 
+	public void springConstructor() {
+		System.out.println("init");
+	}
+	@PreDestroy 
+	public void springDestructor() {
+		System.out.println("delete");
+	}
 
 
 	@Override

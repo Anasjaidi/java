@@ -23,8 +23,3 @@
     
     <context:component-scan base-package="love.code"></context:component-scan>
 </beans>
-
-
-
-
-
