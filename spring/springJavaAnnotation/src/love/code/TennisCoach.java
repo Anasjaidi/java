@@ -9,16 +9,17 @@ public class TennisCoach implements Coach {
 	/**
 	 * Start Private Attributes
 	 * */
+	@Autowired
 	private FortuneService fortuneService;
 	
 	public TennisCoach() {
 		
 	}
 	
-	@Autowired
-	public void usingAnyMethode(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
-	}
+//	@Autowired
+//	public void usingAnyMethode(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
 	
 //	@Autowired
 //	public void setFortuneService(FortuneService fortuneService) {
