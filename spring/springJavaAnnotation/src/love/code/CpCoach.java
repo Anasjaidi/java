@@ -1,12 +1,14 @@
 package love.code;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CpCoach implements Coach {
 	
 	@Autowired
+	@Qualifier("randomService") // add bean ID ("first char lower in case of default")
 	public void setFortuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}

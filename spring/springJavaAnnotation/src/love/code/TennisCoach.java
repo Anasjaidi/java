@@ -1,6 +1,7 @@
 package love.code;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("MyCoach")
@@ -10,6 +11,7 @@ public class TennisCoach implements Coach {
 	 * Start Private Attributes
 	 * */
 	@Autowired
+	@Qualifier("databaseFortuneService")
 	private FortuneService fortuneService;
 	
 	public TennisCoach() {
