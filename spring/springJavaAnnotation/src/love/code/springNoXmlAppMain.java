@@ -14,21 +14,23 @@ public class springNoXmlAppMain {
 		/**
 		 * Retrieve The bean with Default name (first char lower)
 		 * */
-		Coach cpCoach = appCtx.getBean("cpCoach", Coach.class);
+//		Coach cpCoach = appCtx.getBean("cpCoach", Coach.class);
+		Coach swimCoach = appCtx.getBean("swimCoach", Coach.class);
 		
 		/**
 		 * Retrieve the bean with ID
 		 * */
-		Coach tennisCoach = appCtx.getBean("MyCoach", Coach.class);
+//		Coach tennisCoach = appCtx.getBean("MyCoach", Coach.class);
 		
 		
 		/**
 		 * test the retrieved Beans
 		 * */
-		System.out.println(cpCoach.getDailyWorkOut());
-		System.out.println(tennisCoach.getDailyWorkOut());
-		System.out.println(cpCoach.getDailyFortunet());
-		System.out.println(tennisCoach.getDailyFortunet());
+//		System.out.println(cpCoach.getDailyWorkOut());
+//		System.out.println(tennisCoach.getDailyWorkOut());
+//		System.out.println(cpCoach.getDailyFortunet());
+//		System.out.println(tennisCoach.getDailyFortunet());
+		System.out.println(swimCoach.getDailyFortunet());
 	}
 
 }
