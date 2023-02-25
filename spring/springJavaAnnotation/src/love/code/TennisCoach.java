@@ -11,8 +11,17 @@ public class TennisCoach implements Coach {
 	 * */
 	private FortuneService fortuneService;
 	
+	public TennisCoach() {
+		
+	}
 	
-	
+	@Autowired
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+
+
+
 	/**
 	 * Start Class Constructors
 	 * @author Anas.Jaidi
@@ -20,10 +29,10 @@ public class TennisCoach implements Coach {
 	 * {@summary} @Autowired Tell spring
 	 * 						 to Auto lookup and inject the targeted class 
 	 * */
-	@Autowired
-	public TennisCoach(FortuneService _fortuneService) {
-		fortuneService = _fortuneService;
-	}
+//	@Autowired
+//	public TennisCoach() {
+//		fortuneService = _fortuneService;
+//	}
 	
 	
 	
