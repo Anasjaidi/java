@@ -7,6 +7,12 @@ import org.springframework.stereotype.Component;
 public class CpCoach implements Coach {
 	private FortuneService fortuneService;
 	
+	
+	@Autowired
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+
 	@Autowired
 	public CpCoach(FortuneService _fortunrService) {
 		fortuneService = _fortunrService;
