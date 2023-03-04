@@ -36,10 +36,9 @@ public class AppMain {
 			
 			
 			/**
-			 * Close the Spring Context
+			 * clean ctx
 			 * */
 			appCtx.close();
-			
 			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());

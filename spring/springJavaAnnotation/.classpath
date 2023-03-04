@@ -72,5 +72,8 @@
 	<classpathentry kind="lib" path="bin2/spring-websocket-5.3.9.jar"/>
 	<classpathentry kind="lib" path="bin2/spring-websocket-5.3.9-javadoc.jar"/>
 	<classpathentry kind="lib" path="bin2/spring-websocket-5.3.9-sources.jar"/>
+	<classpathentry kind="lib" path="bin2/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="bin2/javaee-api-8.0.1.jar"/>
+	<classpathentry kind="lib" path="bin2/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -25,7 +25,7 @@ public class hashmap {
     a.putIfAbsent("jaidi", 12);
 
     a.remove("anas");
-    
+
     System.out.println(a);
   }
 }
