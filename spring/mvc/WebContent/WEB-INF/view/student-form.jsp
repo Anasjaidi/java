@@ -5,10 +5,12 @@
 		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>
-		<form action="processFormVersionTwo" method="GET">
+		<form:form action="processtheForm" modelAttribute="student">
 			<span>first Name</span>
-			<input type="text" name="studentName"/>
+			<form:input type="text" path="firstName"/>
+			<span>last Name</span>
+			<form:input type="text" path="lastName"/>
 			<button type="submit">add</button>
-		</form>
+		</form:form>
 	</body>
 </html>
