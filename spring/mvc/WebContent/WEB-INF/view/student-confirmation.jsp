@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	${student.firstName}
+	<br>
+	${student.lastName}
 </body>
 </html>
