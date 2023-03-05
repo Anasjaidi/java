@@ -9,6 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/student")
 public class StudentController {
 	
+//	@RequestMapping("/")
+	public String showForm2(Model model) {
+		
+		Student newStudent = new Student();
+		
+		model.addAttribute("student", newStudent);
+		
+		return "student-form";
+	}
 	
 	@RequestMapping("/showtheForm")
 	public String showForm(Model model) {
