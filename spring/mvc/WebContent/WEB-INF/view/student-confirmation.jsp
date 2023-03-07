@@ -4,11 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 <title>Insert title here</title>
+<style>
+</style>
 </head>
 <body>
 	${student.firstName}
 	<br>
 	${student.lastName}
+	${student.country}
 </body>
 </html>
