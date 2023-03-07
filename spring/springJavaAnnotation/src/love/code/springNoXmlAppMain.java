@@ -1,5 +1,7 @@
 package love.code;
 
+import java.io.File;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import love.code.config.springConfig;
@@ -10,7 +12,12 @@ public class springNoXmlAppMain {
 		// TODO Auto-generated method stub
 		AnnotationConfigApplicationContext appCtx = new AnnotationConfigApplicationContext(springConfig.class);
 	
-	
+		String currentWorkingDir = System.getProperty("user.dir");
+		System.out.println("Current working directory: " + currentWorkingDir);
+
+		
+		File testFile = new File("./");
+		System.out.println(testFile.getAbsolutePath());
 		/**
 		 * Retrieve The bean with Default name (first char lower)
 		 * */
