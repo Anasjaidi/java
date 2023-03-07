@@ -22,6 +22,8 @@
 				<label for="last-name">last Name</label>
 				<form:input type="text" path="lastName" id="last-name"/>
 				<form:errors path="lastName"  cssClass="err"/>
+				<form:input type="number" path="freePass" />
+				<form:errors path="freePass"  cssClass="err" />
 			</div>
 			<form:button>add</form:button>
 		</form:form>

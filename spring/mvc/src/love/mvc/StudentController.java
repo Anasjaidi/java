@@ -34,6 +34,10 @@ public class StudentController {
 		
 		System.out.println(newStudent.getFirstName());
 		System.out.println(newStudent.getLastName());
+		for (String str : newStudent.getOs()) {
+			
+			System.out.println(str);
+		}
 		return "student-confirmation";
 	}
 }
