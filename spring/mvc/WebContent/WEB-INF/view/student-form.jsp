@@ -16,6 +16,11 @@
 				<form:options items="${ student.countryOptions }"/>
 				<%-- <form:option value="germany" label="germany" /> --%>
 			</form:select>
+			<div>
+			<p>select language</p>
+			<label for="c++">C++</label>
+			<form:radiobutton path="language" value="c++" id="c++"/> 
+			</div>
 			<button type="submit">add</button>
 		</form:form>
 	</body>
