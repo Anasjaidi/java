@@ -13,7 +13,8 @@
 			<br>
 			<span>Country</span>
 			<form:select path="country">
-				<form:option value="germany" label="germany" />
+				<form:options items="${ student.countryOptions }"/>
+				<%-- <form:option value="germany" label="germany" /> --%>
 			</form:select>
 			<button type="submit">add</button>
 		</form:form>

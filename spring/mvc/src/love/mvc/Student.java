@@ -1,5 +1,7 @@
 package love.mvc;
 
+import java.util.LinkedHashMap;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,6 +11,18 @@ public class Student {
 	private String lastName; 
 	
 	private String country;
+	
+	private LinkedHashMap<String, String> countryOptions;
+	
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return countryOptions;
+	}
+
+
+	public Student() {
+		countryOptions = new LinkedHashMap<>();
+		countryOptions.put("FR", "france");
+	}
 	
 	
 	public String getCountry() {
