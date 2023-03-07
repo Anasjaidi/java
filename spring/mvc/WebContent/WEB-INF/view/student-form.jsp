@@ -19,7 +19,17 @@
 			<div>
 			<p>select language</p>
 			<label for="c++">C++</label>
-			<form:radiobutton path="language" value="c++" id="c++"/> 
+			<form:radiobutton path="language" value="c++" id="c++"/>
+			<label for="js">js</label>
+			<form:radiobutton path="language" value="js" id="js"/> 
+			<label for="rust">rust</label>
+			<form:radiobutton path="language" value="rust" id="rust" />
+			</div>
+			<div>
+				<p>select operating systems</p>
+				Macos <form:checkbox path="os" value="mac"/>
+			windows <form:checkbox path="os" value="msw"/>
+				linux<form:checkbox path="os" value="linux"/>
 			</div>
 			<button type="submit">add</button>
 		</form:form>
