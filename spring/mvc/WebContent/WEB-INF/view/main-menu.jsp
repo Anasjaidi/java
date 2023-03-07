@@ -2,6 +2,7 @@
 	<head></head>
 	<body>
 		<h1>Spring MVC demo</h1>
+		<hr>
 		<a href="showform">submit name</a>
 		<br>
 		<a href="showformVersionTwo">submit name version two</a>

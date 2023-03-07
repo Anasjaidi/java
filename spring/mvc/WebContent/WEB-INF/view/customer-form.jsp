@@ -13,7 +13,7 @@
 	</head>
 	
 	<body>
-		<form:form action="customerProcessForm" modelAttribute="customer">
+		<form:form action="processForm" modelAttribute="customer">
 			<div>
 				<label for="first-name">First Name</label>
 				<form:input type="text" path="firstName" id="first-name"/>
