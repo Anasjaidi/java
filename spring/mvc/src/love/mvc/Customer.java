@@ -13,9 +13,12 @@ public class Customer {
 	@Min(value = 0, message = "greater or equal 0")
 //	@Size(min = 1, message = "is required")
 //	@NotNull(message = "is also req")
-	private int freePass;
+    @NotNull(message = "Postal code is required")
+	private Integer freePass;
 	
-	@Pattern(regexp = "^[a-z1-9A-Z]{5}", message = "need to be 5 chars or more")
+	@Pattern(regexp = "^ [a-z1-9A-Z]{5}", message = "need to be 5 chars or more")
+	@NotNull(message = "is req")
+	@Size(min = 1, message = "is req")
 	private String postalCode;
 	
 	
@@ -29,10 +32,10 @@ public class Customer {
 	private String firstName;
 	
 	
-	public int getFreePass() {
+	public Integer getFreePass() {
 		return freePass;
 	}
-	public void setFreePass(int freePass) {
+	public void setFreePass(Integer freePass) {
 		this.freePass = freePass;
 	}
 	
