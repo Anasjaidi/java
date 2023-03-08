@@ -3,6 +3,7 @@ package love.mvc;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Customer {
@@ -11,10 +12,20 @@ public class Customer {
 	@Max(value = 10, message = "less than 10")
 	@Min(value = 0, message = "greater or equal 0")
 //	@Size(min = 1, message = "is required")
-	@NotNull(message = "is also req")
+//	@NotNull(message = "is also req")
 	private int freePass;
 	
+	@Pattern(regexp = "^[a-z1-9A-Z]{5}", message = "need to be 5 chars or more")
+	private String postalCode;
 	
+	
+	public String getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
+
 	private String firstName;
 	
 	
