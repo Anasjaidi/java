@@ -10,16 +10,18 @@ public class Customer {
 	
 	@Max(value = 10, message = "less than 10")
 	@Min(value = 0, message = "greater or equal 0")
-	private String freePass;
+//	@Size(min = 1, message = "is required")
+	@NotNull(message = "is also req")
+	private int freePass;
 	
 	
 	private String firstName;
 	
 	
-	public String getFreePass() {
+	public int getFreePass() {
 		return freePass;
 	}
-	public void setFreePass(String freePass) {
+	public void setFreePass(int freePass) {
 		this.freePass = freePass;
 	}
 	
