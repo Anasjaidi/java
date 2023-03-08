@@ -22,7 +22,7 @@
 				<label for="last-name">last Name</label>
 				<form:input type="text" path="lastName" id="last-name"/>
 				<form:errors path="lastName"  cssClass="err"/>
-				<form:input type="number" path="freePass" />
+				<form:input type="text" path="freePass" />
 				<form:errors path="freePass"  cssClass="err" />
 				<form:input type="text" path="postalCode" />
 				<form:errors path="postalCode"  cssClass="err" />
