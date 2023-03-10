@@ -8,6 +8,19 @@ import org.hibernate.*;
 
 import love.code.hibernate.entity.Student;
 
+
+/**
+ * alter table hb_student_tracker.student AUTO_INCREMENT=300
+ * 
+ * */
+
+/**
+ * truncate hb_student_tracker.student
+ * 
+ * TRUNCATE is a SQL command that is used to remove all rows from a table,
+ * in a database. When you execute the TRUNCATE command on a table,
+ * it deletes all the data in the table and resets any auto-incrementing IDs or sequences.
+ * */
 public class CreateStudent {
 
 	public static void main(String[] args) {
