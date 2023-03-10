@@ -3,8 +3,6 @@ package love.code.hibernate;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.sql.ordering.antlr.Factory;
 
-import java.util.Iterator;
-import java.util.List;
 
 import org.hibernate.*;
 
@@ -23,7 +21,7 @@ import love.code.hibernate.entity.Student;
  * in a database. When you execute the TRUNCATE command on a table,
  * it deletes all the data in the table and resets any auto-incrementing IDs or sequences.
  * */
-public class ReadStudent {
+public class QueryStudent {
 
 	public static void main(String[] args) {
 
@@ -43,35 +41,56 @@ public class ReadStudent {
 		
 		
 		try {
+			/**
+			 * Create 3 students object 
+			 * */
+			
+				Student student1 = new Student("test", "test", "test.test@icloud.com");
 			
 			/**
 			 * create a transaction
 			 * */
 				
 				session.beginTransaction();
-				
+			
 			/**
-			 * query the students
+			 * save the students objects
 			 * */
 				
-				List<Student> myStudentsList = session.createQuery("from Student").getResultList();
-				
-				
-			/**
-			 * 
-			 * Print results
-			 * */
-				
-				for (Student myStudent : myStudentsList) {
-					System.out.println(myStudent);
-					
-				}
+				session.save(student1);
 			
 			/**
 			 * commit the transaction
 			 * */
 				session.getTransaction().commit();
 				
+				
+			/**
+			 * create second session and transaction
+			 * */
+				
+				session = factory.getCurrentSession();
+				session.beginTransaction();
+				
+			/**
+			 * get the student with ID
+			 * */
+			
+				Student myStudent = session.get(Student.class, student1.getId());
+				
+			/**
+			 * commit the transaction
+			 * */
+				
+				session.getTransaction().commit();
+			
+			/**
+			 * print the student infos
+			 * */
+			
+				
+				System.out.println(myStudent);
+			
 				
 			
 		} catch (Exception e) {
