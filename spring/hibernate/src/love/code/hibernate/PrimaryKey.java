@@ -1,16 +1,15 @@
 package love.code.hibernate;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.sql.ordering.antlr.Factory;
-
-
-import org.hibernate.*;
 
 import love.code.hibernate.entity.Student;
 
-public class CreateStudent {
+public class PrimaryKey {
 
 	public static void main(String[] args) {
+		
 
 		/**
 		 * start session factory
@@ -29,12 +28,10 @@ public class CreateStudent {
 		
 		try {
 			/**
-			 * Create 3 students object 
+			 * Create a student object 
 			 * */
 			
-				Student student1 = new Student("anas", "anas", "anas.jaidi@icloud.com");
-				Student student2 = new Student("robin", "hood", "anas.jaidi@icloud.com");
-				Student student3 = new Student("jaidi", "jaidi", "anas.jaidi@icloud.com");
+				Student student = new Student("anas", "jaidi", "anas.jaidi@icloud.com");
 			
 			/**
 			 * create a transaction
@@ -43,12 +40,10 @@ public class CreateStudent {
 				session.beginTransaction();
 			
 			/**
-			 * save the students objects
+			 * save the student object
 			 * */
 				
-				session.save(student1);
-				session.save(student2);
-				session.save(student3);
+				session.save(student);
 			
 			/**
 			 * commit the transaction
@@ -60,6 +55,7 @@ public class CreateStudent {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 
 	}
 
