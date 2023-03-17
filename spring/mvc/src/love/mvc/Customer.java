@@ -16,7 +16,7 @@ public class Customer {
     @NotNull(message = "Postal code is required")
 	private Integer freePass;
 	
-	@Pattern(regexp = "^[a-z1-9A-Z]{5}", message = "need to be 5 chars or more")
+	@Pattern(regexp = "14000" , message = "need to be 5 chars or more")
 	@NotNull(message = "is req")
 	@Size(min = 1, message = "is req")
 	private String postalCode;
