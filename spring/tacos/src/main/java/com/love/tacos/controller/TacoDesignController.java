@@ -42,6 +42,8 @@ public class TacoDesignController {
         log.debug("yes its debug");
         log.error("yes its error");
 
+        model.addAttribute("test", "yes im working");
+
         return "design";
 
     }
