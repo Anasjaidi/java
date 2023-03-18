@@ -2,6 +2,7 @@ package com.love.tacos.controller;
 
 
 import com.love.tacos.model.Ingredient;
+import com.love.tacos.model.Taco;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Controller
@@ -33,22 +35,29 @@ public class TacoDesignController {
         );
 
         Ingredient.Type[] types = Ingredient.Type.values();
-//        for (Ingredient.Type type : types) {
-//            model.addAttribute(type.toString().toLowerCase(), filterByType(ingredients, type));
-//        }
-//
-//        model.addAttribute("design", new Taco());
-        log.info("yes its info");
-        log.debug("yes its debug");
-        log.error("yes its error");
+        for (Ingredient.Type type : types) {
+            model.addAttribute(type.toString().toLowerCase(), filterByType(type, ingredients));
+        }
 
-        List<Integer> arr = Arrays.asList(1, 2, 3);
+        model.addAttribute("design", new Taco());
 
-        model.addAttribute("test", "yes im working");
+//        log.info("yes its info");
+//        log.debug("yes its debug");
+//        log.error("yes its error");
 
-        model.addAttribute("arr", arr);
+//        List<Integer> arr = Arrays.asList(1, 2, 3);
+
+//        model.addAttribute("test", "yes im working");
+
+//        model.addAttribute("arr", arr);
 
         return "design";
 
+    }
+
+    private List<Ingredient> filterByType(Ingredient.Type type, List<Ingredient> ingredients) {
+        return ingredients.stream()
+                .filter(x -> x.getType().equals(type))
+                .collect(Collectors.toList());
     }
 }
