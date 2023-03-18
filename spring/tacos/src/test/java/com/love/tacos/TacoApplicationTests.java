@@ -1,26 +1,27 @@
-package com.love.tacos;
+package com.love.tacos;//package kr.pe.acet.acetrestapi.index;
 
-import static org.hamcrest.Matchers.containsString;
-import static
-        org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static
-        org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static
-        org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static
-        org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
-
-import com.love.tacos.controller.TacoHomeController;
-import org.testng.annotations.Test;
-import org.junit.runner.RunWith;
+//import kr.pe.acet.acetrestapi.common.RestDocsConfiguration;
+import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.love.tacos.controller.TacoHomeController;
-@RunWith(SpringRunner.class)
-@WebMvcTest(TacoHomeController.class)
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+@AutoConfigureRestDocs
+@Import(TacosApplication.class)
+@ActiveProfiles("test")
 public class TacoApplicationTests {
     @Autowired
     private MockMvc mockMvc;
