@@ -42,7 +42,11 @@ public class TacoDesignController {
         log.debug("yes its debug");
         log.error("yes its error");
 
+        List<Integer> arr = Arrays.asList(1, 2, 3);
+
         model.addAttribute("test", "yes im working");
+
+        model.addAttribute("arr", arr);
 
         return "design";
 
