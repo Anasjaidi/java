@@ -2,6 +2,7 @@ package com.love.tacos.controller;
 
 
 import com.love.tacos.model.Ingredient;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Arrays;
 import java.util.List;
 
-
+@Slf4j
 @Controller
 @RequestMapping("/design")
 public class TacoDesignController {
@@ -37,7 +38,11 @@ public class TacoDesignController {
 //        }
 //
 //        model.addAttribute("design", new Taco());
+        log.info("yes its info");
+        log.debug("yes its debug");
+        log.error("yes its error");
 
         return "design";
+
     }
 }
