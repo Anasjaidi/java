@@ -61,4 +61,10 @@ public class TacoDesignController {
                 .filter(x -> x.getType().equals(type))
                 .collect(Collectors.toList());
     }
+
+    @PostMapping
+    public String processForm(Taco taco, Model model) {
+        log.info(taco.toString());
+        return "redirect:/order/current";
+    }
 }
