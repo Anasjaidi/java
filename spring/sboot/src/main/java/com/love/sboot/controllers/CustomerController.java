@@ -27,4 +27,8 @@ public class CustomerController {
         customerRepository.save(customerToSave);
     }
 
+    @DeleteMapping("{_id}")
+    public void deleteCustomer(@PathVariable("_id") Integer _ID) {
+        customerRepository.deleteById(_ID);
+    }
 }
