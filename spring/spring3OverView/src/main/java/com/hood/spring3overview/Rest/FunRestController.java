@@ -11,4 +11,8 @@ public class FunRestController {
     public String sayHello() {
         return "Hello, World, There!";
     }
+    @RequestMapping("/hi")
+    public String sayHi() {
+        return "Hello!";
+    }
 }
