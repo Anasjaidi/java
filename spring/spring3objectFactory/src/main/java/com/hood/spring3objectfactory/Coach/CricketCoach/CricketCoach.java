@@ -1,6 +1,8 @@
 package com.hood.spring3objectfactory.Coach.CricketCoach;
 
 import com.hood.spring3objectfactory.Coach.Coach;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
@@ -19,6 +21,15 @@ public class CricketCoach implements Coach {
         this.name = name;
     }
 
+    @PostConstruct
+    public void doMyStartUpStuff() {
+        System.out.println("yes initializing the cricket coach");
+    }
+
+    @PreDestroy
+    public void doMyCleanUpStuff() {
+        System.out.println("yes cleaning the cricket coach");
+    }
     String name = "anas jaidi";
     @Override
     public String getDailyWorkout() {
