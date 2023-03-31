@@ -8,8 +8,13 @@ import org.springframework.stereotype.Component;
 
 
 public class CricketCoach implements Coach {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    String name = "anas jaidi";
     @Override
     public String getDailyWorkout() {
-        return "ok its good body";
+        return "ok its good body " + name;
     }
 }

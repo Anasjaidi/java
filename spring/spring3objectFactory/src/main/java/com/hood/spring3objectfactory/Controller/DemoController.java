@@ -18,6 +18,7 @@ public class DemoController {
 
     @GetMapping("/new")
     String getNewCoach() {
+        newCoach.setName("robin hood");
         return newCoach.getDailyWorkout();
     }
 }
