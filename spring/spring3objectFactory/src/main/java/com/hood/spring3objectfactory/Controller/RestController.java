@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class RestController {
     @Autowired
     public RestController(@Qualifier("cricketCoach") Coach myCoach) {
+        System.out.println("in constructor: " + getClass().getSimpleName());
         this.myCoach = myCoach;
     }
 

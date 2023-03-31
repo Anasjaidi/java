@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PrimaryController {
     @Autowired
     public void setNewCoach(Coach newCoach) {
+        System.out.println("in constructor: " + getClass().getSimpleName());
         this.newCoach = newCoach;
     }
 

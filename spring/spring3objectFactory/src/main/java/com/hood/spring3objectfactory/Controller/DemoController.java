@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @Autowired
     public void setNewCoach(@Qualifier("baseballcoach") Coach newCoach) {
+        System.out.println("in constructor: " + getClass().getSimpleName());
         this.newCoach = newCoach;
     }
 
