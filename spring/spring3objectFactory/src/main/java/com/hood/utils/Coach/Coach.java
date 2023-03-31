@@ -1,4 +1,4 @@
-package com.hood.spring3objectfactory.Coach;
+package com.hood.utils.Coach;
 
 public interface Coach {
     public String getDailyWorkout();

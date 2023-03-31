@@ -1,12 +1,15 @@
-package com.hood.spring3objectfactory.CricketCoach;
+package com.hood.utils.Coach.CricketCoach;
 
-import com.hood.spring3objectfactory.Coach.Coach;
+import com.hood.utils.Coach.Coach;
 import org.springframework.stereotype.Component;
 
 @Component
+
+
+
 public class CricketCoach implements Coach {
     @Override
     public String getDailyWorkout() {
-        return "ok its good";
+        return "ok its good body";
     }
 }
