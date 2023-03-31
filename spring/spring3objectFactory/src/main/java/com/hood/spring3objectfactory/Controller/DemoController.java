@@ -2,6 +2,7 @@ package com.hood.spring3objectfactory.Controller;
 
 import com.hood.spring3objectfactory.Coach.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/coach")
 public class DemoController {
     @Autowired
-    public void setNewCoach(Coach newCoach) {
+    public void setNewCoach(@Qualifier("baseballcoach") Coach newCoach) {
         this.newCoach = newCoach;
     }
 
