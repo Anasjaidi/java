@@ -10,17 +10,19 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
     @Autowired
-    public RestController(@Qualifier("cricketCoach") Coach myCoach) {
+    public RestController(@Qualifier("cricketCoach") Coach myCoach, @Qualifier("swimCoach") Coach swim) {
         System.out.println("in constructor: " + getClass().getSimpleName());
         this.myCoach = myCoach;
+        this.swimCoach = swim;
     }
 
     Coach myCoach;
+    Coach swimCoach;
 
 
     @GetMapping ("/coach")
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
     public String get() {
-        return myCoach.getDailyWorkout();
+        return myCoach.getDailyWorkout() + swimCoach.getDailyWorkout();
     }
 }
