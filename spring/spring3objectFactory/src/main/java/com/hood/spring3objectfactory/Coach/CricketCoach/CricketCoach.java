@@ -1,6 +1,6 @@
-package com.hood.utils.Coach.CricketCoach;
+package com.hood.spring3objectfactory.Coach.CricketCoach;
 
-import com.hood.utils.Coach.Coach;
+import com.hood.spring3objectfactory.Coach.Coach;
 import org.springframework.stereotype.Component;
 
 @Component

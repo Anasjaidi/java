@@ -1,6 +1,6 @@
 package com.hood.spring3objectfactory.Controller;
 
-import com.hood.utils.Coach.Coach;
+import com.hood.spring3objectfactory.Coach.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
