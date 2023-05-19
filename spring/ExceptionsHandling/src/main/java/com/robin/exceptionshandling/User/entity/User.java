@@ -27,5 +27,18 @@ public class User {
 
     private int age;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                ", nationality='" + nationality + '\'' +
+                '}';
+    }
+
     private String nationality;
 }
