@@ -35,4 +35,9 @@ public class UserController {
     public ResponseEntity<List<User>> getAllUsers() {
         return new ResponseEntity<>(service.getAllUsers(), HttpStatus.OK);
     }
+
+    @GetMapping("{id}")
+    public ResponseEntity<User> getUserById(@PathVariable int id) {
+        return new ResponseEntity<>(service.getUserById(id), HttpStatus.OK);
+    }
 }

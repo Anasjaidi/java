@@ -1,5 +1,6 @@
 package com.robin.exceptionshandling.errors;
 
+import com.robin.exceptionshandling.User.errors.UserNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -24,5 +25,11 @@ public class InvalidRequestExceptionsHandler {
 
 
         return  ResponseEntity.badRequest().body(errorMap);
+    }
+
+    @ExceptionHandler(value = UserNotFoundException.class)
+    public ResponseEntity<String> invalidRequestHandler(UserNotFoundException exc) {
+
+        return  ResponseEntity.badRequest().body(exc.getMessage());
     }
 }

@@ -2,6 +2,7 @@ package com.robin.exceptionshandling.User.service;
 
 import com.robin.exceptionshandling.User.dto.UserRequest;
 import com.robin.exceptionshandling.User.entity.User;
+import com.robin.exceptionshandling.User.errors.UserNotFoundException;
 import com.robin.exceptionshandling.User.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,12 @@ public class UserService {
     }
 
     public User getUserById(Integer id) {
-        return repository.findByUid(id);
+        User user =  repository.findByUid(id);
+
+        if (user == null) {
+            throw new UserNotFoundException("user not found");
+        } else {
+            return user;
+        }
     }
 }
