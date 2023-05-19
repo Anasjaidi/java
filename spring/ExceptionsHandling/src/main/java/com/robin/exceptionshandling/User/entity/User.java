@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id
     @GeneratedValue
-    private int id;
+    private int uid;
     private String name;
 
     private String email;
@@ -30,7 +30,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "id=" + uid +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", mobile='" + mobile + '\'' +

@@ -27,6 +27,6 @@ public class UserService {
     }
 
     public User getUserById(Integer id) {
-        return repository.findUserById(id);
+        return repository.findByUid(id);
     }
 }
