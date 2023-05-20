@@ -4,9 +4,7 @@ import com.robin.sprinrestapi.modules.employees.entity.Employee;
 
 import java.util.List;
 
-public class EmployeesRepository implements EmployeeRepositoryDAO{
-    @Override
-    public List<Employee> findAll() {
-        return null;
-    }
+public interface EmployeeRepositoryDAO {
+
+    List<Employee> findAll();
 }

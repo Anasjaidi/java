@@ -45,6 +45,13 @@ public class HomeController {
 
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler
+    public ResponseEntity<StudentErrorResponse> handlerAll(Exception exc) {
+        StudentErrorResponse error = new StudentErrorResponse(HttpStatus.CONFLICT.value(), exc.getMessage(), System.currentTimeMillis());
+
+        return new ResponseEntity<>(error, HttpStatus.CONFLICT);
+    }
     @GetMapping("/{index}")
     public Student getStudentById(@PathVariable int index) {
         if (index < 0 || index >= students.size()) throw new StudentNotFoundException("student not found");
