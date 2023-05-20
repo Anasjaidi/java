@@ -1,6 +1,6 @@
 package com.robin.sprinrestapi;
 
-import com.robin.sprinrestapi.modules.employees.repository.EmployeesRepository;
+import com.robin.sprinrestapi.modules.employees.repository.EmployeesRepositoryImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,7 @@ public class SprinRestApiApplication {
     }
 
     @Bean
-    CommandLineRunner commandLineRunner(EmployeesRepository repository) {
+    CommandLineRunner commandLineRunner(EmployeesRepositoryImpl repository) {
         return cmd -> {
             System.out.println("is in run");
         };

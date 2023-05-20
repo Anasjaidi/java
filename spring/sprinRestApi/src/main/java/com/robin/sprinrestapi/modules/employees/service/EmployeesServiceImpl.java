@@ -1,17 +1,17 @@
 package com.robin.sprinrestapi.modules.employees.service;
 
 import com.robin.sprinrestapi.modules.employees.entity.Employee;
-import com.robin.sprinrestapi.modules.employees.repository.EmployeeRepositoryDAO;
+import com.robin.sprinrestapi.modules.employees.repository.EmployeesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class EmployeeServiceImpl implements EmployeesService {
-    private EmployeeRepositoryDAO repository;
+public class EmployeesServiceImpl implements EmployeesService {
+    private EmployeesRepository repository;
     @Autowired
-    public EmployeeServiceImpl(EmployeeRepositoryDAO repository) {
+    public EmployeesServiceImpl(EmployeesRepository repository) {
         this.repository = repository;
     }
     @Override
