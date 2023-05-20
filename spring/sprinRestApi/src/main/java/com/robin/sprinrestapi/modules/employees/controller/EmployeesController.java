@@ -44,4 +44,9 @@ public class EmployeesController {
 
         return service.save(employee);
     }
+
+    @DeleteMapping("{id}")
+    public void deleteEmployee(@PathVariable int id) {
+        service.deleteById(id);
+    }
 }
