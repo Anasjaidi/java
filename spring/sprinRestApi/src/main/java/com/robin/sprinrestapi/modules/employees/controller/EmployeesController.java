@@ -1,12 +1,12 @@
 package com.robin.sprinrestapi.modules.employees.controller;
 
+import com.robin.sprinrestapi.modules.employees.dto.EmployeeRequest;
 import com.robin.sprinrestapi.modules.employees.entity.Employee;
 import com.robin.sprinrestapi.modules.employees.service.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +26,12 @@ public class EmployeesController {
     @GetMapping("{id}")
     public Employee getEmployeeById(@PathVariable int id) {
         return service.findById(id);
+    }
+
+    @PostMapping
+    public ResponseEntity<Employee> saveNewEmployee(@RequestBody EmployeeRequest employeeRequest) {
+        Employee newEmployee = Employee.builder(0, employeeRequest.getFirstName(), employeeRequest.getLastName(), employeeRequest.getEmail());
+
+        return new ResponseEntity<>(service.save(newEmployee), HttpStatus.CREATED);
     }
 }
