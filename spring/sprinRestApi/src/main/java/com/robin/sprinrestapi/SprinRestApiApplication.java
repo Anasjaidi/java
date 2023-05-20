@@ -1,7 +1,10 @@
 package com.robin.sprinrestapi;
 
+import com.robin.sprinrestapi.modules.employees.repository.EmployeesRepository;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SprinRestApiApplication {
@@ -10,4 +13,10 @@ public class SprinRestApiApplication {
         SpringApplication.run(SprinRestApiApplication.class, args);
     }
 
+    @Bean
+    CommandLineRunner commandLineRunner(EmployeesRepository repository) {
+        return cmd -> {
+            System.out.println("is in run");
+        };
+    }
 }

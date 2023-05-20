@@ -1,4 +1,9 @@
 package com.robin.sprinrestapi.modules.employees.service;
 
-public class EmployeesService {
+import com.robin.sprinrestapi.modules.employees.entity.Employee;
+
+import java.util.List;
+
+public interface EmployeesService {
+    List<Employee> findAll();
 }
