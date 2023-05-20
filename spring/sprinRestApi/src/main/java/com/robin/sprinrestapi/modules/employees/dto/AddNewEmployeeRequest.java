@@ -1,10 +1,9 @@
 package com.robin.sprinrestapi.modules.employees.dto;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 
-public class EmployeeRequest {
+public class AddNewEmployeeRequest {
     @NotNull
     private String firstName;
     @NotNull
@@ -46,7 +45,7 @@ public class EmployeeRequest {
                 '}';
     }
 
-    public EmployeeRequest(String firstName, String lastName, String email) {
+    public AddNewEmployeeRequest(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

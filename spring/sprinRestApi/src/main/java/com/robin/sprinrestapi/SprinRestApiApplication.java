@@ -13,10 +13,4 @@ public class SprinRestApiApplication {
         SpringApplication.run(SprinRestApiApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner(EmployeesRepositoryImpl repository) {
-        return cmd -> {
-            System.out.println("is in run");
-        };
-    }
 }

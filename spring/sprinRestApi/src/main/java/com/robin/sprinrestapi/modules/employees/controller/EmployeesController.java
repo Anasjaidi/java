@@ -1,6 +1,7 @@
 package com.robin.sprinrestapi.modules.employees.controller;
 
-import com.robin.sprinrestapi.modules.employees.dto.EmployeeRequest;
+import com.robin.sprinrestapi.modules.employees.dto.AddNewEmployeeRequest;
+import com.robin.sprinrestapi.modules.employees.dto.UpdateEmployeeRequest;
 import com.robin.sprinrestapi.modules.employees.entity.Employee;
 import com.robin.sprinrestapi.modules.employees.service.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +30,18 @@ public class EmployeesController {
     }
 
     @PostMapping
-    public ResponseEntity<Employee> saveNewEmployee(@RequestBody EmployeeRequest employeeRequest) {
-        Employee newEmployee = Employee.builder(0, employeeRequest.getFirstName(), employeeRequest.getLastName(), employeeRequest.getEmail());
+    public ResponseEntity<Employee> saveNewEmployee(@RequestBody AddNewEmployeeRequest addNewEmployeeRequest) {
+        Employee newEmployee = Employee.builder(0, addNewEmployeeRequest.getFirstName(), addNewEmployeeRequest.getLastName(), addNewEmployeeRequest.getEmail());
 
         return new ResponseEntity<>(service.save(newEmployee), HttpStatus.CREATED);
+    }
+
+
+    @PatchMapping("{id}")
+    public Employee updateEmployee(@RequestBody UpdateEmployeeRequest update, @PathVariable int id) {
+
+        Employee employee = Employee.builder(id, update.getFirstName(), update.getLastName(), update.getEmail()) ;
+
+        return service.save(employee);
     }
 }
