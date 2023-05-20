@@ -2,6 +2,7 @@ package com.robin.sprinrestapi.modules.employees.service;
 
 import com.robin.sprinrestapi.modules.employees.entity.Employee;
 import com.robin.sprinrestapi.modules.employees.repository.EmployeesRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,11 +25,13 @@ public class EmployeesServiceImpl implements EmployeesService {
         return repository.findById(id);
     }
     @Override
+    @Transactional
     public Employee save(Employee employee) {
         return repository.save(employee);
     }
 
     @Override
+    @Transactional
     public void deleteById(int id) {
         repository.deleteById(id);
     }
