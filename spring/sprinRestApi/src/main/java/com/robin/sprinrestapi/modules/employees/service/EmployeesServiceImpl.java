@@ -18,4 +18,18 @@ public class EmployeesServiceImpl implements EmployeesService {
     public List<Employee> findAll() {
         return repository.findAll();
     }
+
+    @Override
+    public Employee findById(int id) {
+        return null;
+    }
+    @Override
+    public Employee save(Employee employee) {
+        return null;
+    }
+
+    @Override
+    public void deleteById(int id) {
+
+    }
 }

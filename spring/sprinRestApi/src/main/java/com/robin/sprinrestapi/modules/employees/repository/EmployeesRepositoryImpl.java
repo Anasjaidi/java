@@ -28,7 +28,7 @@ public class EmployeesRepositoryImpl implements EmployeesRepository {
 
     @Override
     public Employee save(Employee employee) {
-        return manager.merge(employee);
+        return manager.merge(employee); // save if id == 0 or update if id != 0
     }
 
     @Override
