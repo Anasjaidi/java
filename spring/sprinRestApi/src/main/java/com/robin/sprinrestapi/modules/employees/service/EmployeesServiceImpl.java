@@ -21,15 +21,15 @@ public class EmployeesServiceImpl implements EmployeesService {
 
     @Override
     public Employee findById(int id) {
-        return null;
+        return repository.findById(id);
     }
     @Override
     public Employee save(Employee employee) {
-        return null;
+        return repository.save(employee);
     }
 
     @Override
     public void deleteById(int id) {
-
+        repository.deleteById(id);
     }
 }
