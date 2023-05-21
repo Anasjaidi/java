@@ -8,15 +8,15 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 
-@EnableWebSecurity
-public class SpringSecurityConfig {
-    @Bean
-    public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((requests) -> {
-            ((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)requests.anyRequest()).authenticated();
-        });
-        http.formLogin(Customizer.withDefaults());
-        http.httpBasic(Customizer.withDefaults());
-        return (SecurityFilterChain)http.build();
-    }
-}
+//@EnableWebSecurity
+//public class SpringSecurityConfig {
+//    @Bean
+//    public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception {
+//        http.authorizeHttpRequests((requests) -> {
+//            ((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)requests.anyRequest()).authenticated();
+//        });
+//        http.formLogin(Customizer.withDefaults());
+//        http.httpBasic(Customizer.withDefaults());
+//        return (SecurityFilterChain)http.build();
+//    }
+//}
